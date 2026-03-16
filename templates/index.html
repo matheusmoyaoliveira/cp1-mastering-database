@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>SQLgard - RPG Engine</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        h1 {
+            margin-bottom: 5px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f3f3f3;
+        }
+
+        .caido {
+            background-color: #f8d7da;
+            font-weight: bold;
+        }
+
+        .ativo {
+            background-color: #d1e7dd;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>SQLgard - RPG Engine</h1>
+    <p>O Despertar do Kernel Ancestral</p>
+
+    <form action="{{ url_for('proximo_turno') }}" method="post">
+        <button type="submit">Próximo Turno</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Classe</th>
+                <th>HP</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for heroi in herois %}
+            <tr>
+                <td>{{ heroi.id_heroi }}</td>
+                <td>{{ heroi.nome }}</td>
+                <td>{{ heroi.classe }}</td>
+                <td>{{ heroi.hp_atual }}/{{ heroi.hp_max }}</td>
+                <td class="{{ 'caido' if heroi.status == 'CAÍDO' else 'ativo' }}">
+                    {{ heroi.status }}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
