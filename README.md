@@ -205,8 +205,8 @@ Responsável pelo refinamento da lógica em PL/SQL e finalização da regra de n
 
 ## Integrantes
 
-- **[Nome do Integrante 1]**
-- **[Nome do Integrante 2]**
+- **Matheus Moya de Oliveira**
+- **Ana Carolina Pereira Fontes**
 
 ---
 
