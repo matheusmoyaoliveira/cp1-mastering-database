@@ -178,7 +178,7 @@ Cadastrar no painel do projeto:
 
 ## Participação dos integrantes
 
-### Integrante 1
+### Matheus
 Responsável pela estrutura principal da lógica em PL/SQL, incluindo:
 
 - criação da tabela de heróis
@@ -191,7 +191,7 @@ Responsável pela estrutura principal da lógica em PL/SQL, incluindo:
 - atualização inicial do HP dos heróis
 - organização da base do projeto
 
-### Integrante 2
+### Ana
 Responsável pelo refinamento da lógica em PL/SQL e finalização da regra de negócio, incluindo:
 
 - tratamento para impedir HP negativo
